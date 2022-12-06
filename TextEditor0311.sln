@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextEditor0311", "TextEditor0311\TextEditor0311.vcxproj", "{A5B7080F-7027-4579-95B1-253BCD3BA3F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5B7080F-7027-4579-95B1-253BCD3BA3F8}.Debug|x64.ActiveCfg = Debug|x64
+		{A5B7080F-7027-4579-95B1-253BCD3BA3F8}.Debug|x64.Build.0 = Debug|x64
+		{A5B7080F-7027-4579-95B1-253BCD3BA3F8}.Release|x64.ActiveCfg = Release|x64
+		{A5B7080F-7027-4579-95B1-253BCD3BA3F8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {336E5B75-79EC-46D0-8256-CC134B7F0E7F}
+	EndGlobalSection
+EndGlobal

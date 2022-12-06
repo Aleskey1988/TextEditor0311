@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/MainWindow">
+        <file>Resources/about.svg</file>
+        <file>Resources/copy.svg</file>
+        <file>Resources/cut.svg</file>
+        <file>Resources/date-time.svg</file>
+        <file>Resources/delete.svg</file>
+        <file>Resources/exit.svg</file>
+        <file>Resources/find.svg</file>
+        <file>Resources/folder.svg</file>
+        <file>Resources/font.svg</file>
+        <file>Resources/font-decrease.svg</file>
+        <file>Resources/font-increase.svg</file>
+        <file>Resources/open.svg</file>
+        <file>Resources/paste.svg</file>
+        <file>Resources/redo.svg</file>
+        <file>Resources/replace.svg</file>
+        <file>Resources/save.svg</file>
+        <file>Resources/select.svg</file>
+        <file>Resources/TextEditor.svg</file>
+        <file>Resources/undo.svg</file>
+    </qresource>
+</RCC>
