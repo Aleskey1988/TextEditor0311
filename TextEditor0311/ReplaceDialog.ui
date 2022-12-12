@@ -1,46 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FindDialog</class>
- <widget class="QWidget" name="FindDialog">
+ <class>ReplaceDialog</class>
+ <widget class="QWidget" name="ReplaceDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>365</width>
-    <height>66</height>
+    <width>372</width>
+    <height>92</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Find</string>
+   <string>Replace</string>
   </property>
   <property name="windowIcon">
    <iconset resource="MainWindow.qrc">
-    <normaloff>:/MainWindow/Resources/find.svg</normaloff>:/MainWindow/Resources/find.svg</iconset>
-  </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
+    <normaloff>:/MainWindow/Resources/replace.svg</normaloff>:/MainWindow/Resources/replace.svg</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="2">
-      <widget class="QPushButton" name="buttonFind">
+      <widget class="QPushButton" name="buttonReplace">
        <property name="text">
-        <string>Find</string>
+        <string>Replace</string>
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="label">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Find:</string>
+        <string>Replace to:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="editReplaceWhat"/>
      </item>
-     <item row="1" column="0">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Replace what:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="editReplaceTo"/>
+     </item>
+     <item row="2" column="0">
       <widget class="QCheckBox" name="checkMatchCase">
        <property name="text">
         <string>Match case</string>
@@ -53,8 +60,9 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>buttonFind</tabstop>
+  <tabstop>editReplaceWhat</tabstop>
+  <tabstop>editReplaceTo</tabstop>
+  <tabstop>buttonReplace</tabstop>
   <tabstop>checkMatchCase</tabstop>
  </tabstops>
  <resources>

@@ -18,7 +18,11 @@ MainWindow::MainWindow(QWidget* parent)
 	connect(ui.actionSave, &QAction::triggered, this, &MainWindow::onSave);
 	connect(ui.actionSaveAs, &QAction::triggered, this, &MainWindow::onSaveAs);
 	connect(ui.actionFind, &QAction::triggered, this, &MainWindow::onFind);
-	connect(&dlg, &FindDialog::textFound, this, &MainWindow::onTextFound);
+	connect(ui.actionReplace, &QAction::triggered, this, &MainWindow::onReplace);
+	
+	connect(&findDialog, &FindDialog::textFound, this, &MainWindow::onTextFound);
+	connect(&replaceDialog, &ReplaceDialog::textReplaced,
+		this, &MainWindow::onTextReplaced);
 }
 
 void MainWindow::onOpen()
@@ -52,8 +56,14 @@ void MainWindow::onSaveAs()
 }
 void MainWindow::onFind()
 {
-	dlg.SetText(ui.textEdit->toPlainText());
-	dlg.show();
+	findDialog.SetText(ui.textEdit->toPlainText());
+	findDialog.show();
+}
+
+void MainWindow::onReplace()
+{
+	replaceDialog.SetText(ui.textEdit->toPlainText());
+	replaceDialog.show();
 }
 
 void MainWindow::save(QString fileName)
@@ -71,4 +81,9 @@ void MainWindow::onTextFound(int index, int length)
 	c.setPosition(index);
 	c.setPosition(index + length, QTextCursor::KeepAnchor);
 	ui.textEdit->setTextCursor(c);
+}
+
+void MainWindow::onTextReplaced(QString text)
+{
+	ui.textEdit->setPlainText(text);
 }

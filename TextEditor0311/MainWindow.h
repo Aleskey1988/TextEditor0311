@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_MainWindow.h"
 #include "FindDialog.h"
+#include "ReplaceDialog.h"
 
 class MainWindow : public QMainWindow
 {
@@ -16,11 +17,14 @@ private:
 	void onSave();
 	void onSaveAs();
 	void onFind();
+	void onReplace();
 
 	void save(QString fileName);
 	void onTextFound(int index, int length);
+	void onTextReplaced(QString text);
 
 	Ui::MainWindowClass ui;
 	QString lastFile;
-	FindDialog dlg;
+	FindDialog findDialog;
+	ReplaceDialog replaceDialog;
 };

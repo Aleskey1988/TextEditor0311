@@ -105,6 +105,19 @@
    <addaction name="actionSaveAs"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFind"/>
+   <addaction name="actionReplace"/>
+  </widget>
   <action name="actionOpen">
    <property name="icon">
     <iconset resource="MainWindow.qrc">
@@ -177,6 +190,10 @@
    </property>
   </action>
   <action name="actionReplace">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/replace.svg</normaloff>:/MainWindow/Resources/replace.svg</iconset>
+   </property>
    <property name="text">
     <string>Replace...</string>
    </property>
