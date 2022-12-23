@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AboutDialog.cpp" />
     <ClCompile Include="FindDialog.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
@@ -89,6 +90,7 @@
     <QtMoc Include="MainWindow.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="AboutDialog.ui" />
     <QtUic Include="FindDialog.ui" />
     <QtUic Include="MainWindow.ui" />
     <QtUic Include="ReplaceDialog.ui" />
@@ -104,6 +106,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="ReplaceDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AboutDialog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

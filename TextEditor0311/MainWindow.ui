@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>656</width>
+    <height>419</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -41,7 +41,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>656</width>
      <height>21</height>
     </rect>
    </property>
@@ -103,6 +103,12 @@
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
    <addaction name="actionSaveAs"/>
+   <addaction name="separator"/>
+   <addaction name="actionIncreaseFontSize"/>
+   <addaction name="actionDecreaseFontSize"/>
+   <addaction name="actionFont"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="toolBar">
@@ -115,8 +121,19 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionDelete"/>
+   <addaction name="separator"/>
    <addaction name="actionFind"/>
    <addaction name="actionReplace"/>
+   <addaction name="separator"/>
+   <addaction name="actionSelectAll"/>
+   <addaction name="actionDateAndTime"/>
   </widget>
   <action name="actionOpen">
    <property name="icon">
@@ -125,6 +142,9 @@
    </property>
    <property name="text">
     <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
    </property>
   </action>
   <action name="actionSave">
@@ -135,6 +155,9 @@
    <property name="text">
     <string>Save</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
   </action>
   <action name="actionSaveAs">
    <property name="icon">
@@ -144,40 +167,88 @@
    <property name="text">
     <string>Save as...</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
   </action>
   <action name="actionExit">
    <property name="text">
     <string>Exit</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+F4</string>
+   </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/undo.svg</normaloff>:/MainWindow/Resources/undo.svg</iconset>
+   </property>
    <property name="text">
     <string>Undo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
   </action>
   <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/redo.svg</normaloff>:/MainWindow/Resources/redo.svg</iconset>
+   </property>
    <property name="text">
     <string>Redo</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/cut.svg</normaloff>:/MainWindow/Resources/cut.svg</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/copy.svg</normaloff>:/MainWindow/Resources/copy.svg</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/paste.svg</normaloff>:/MainWindow/Resources/paste.svg</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
   </action>
   <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/delete.svg</normaloff>:/MainWindow/Resources/delete.svg</iconset>
+   </property>
    <property name="text">
     <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
   <action name="actionFind">
@@ -188,6 +259,9 @@
    <property name="text">
     <string>Find...</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
   </action>
   <action name="actionReplace">
    <property name="icon">
@@ -197,35 +271,80 @@
    <property name="text">
     <string>Replace...</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="actionSelectAll">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/select.svg</normaloff>:/MainWindow/Resources/select.svg</iconset>
+   </property>
    <property name="text">
     <string>Select all</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
   </action>
   <action name="actionDateAndTime">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/date-time.svg</normaloff>:/MainWindow/Resources/date-time.svg</iconset>
+   </property>
    <property name="text">
     <string>Date and time</string>
    </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
   </action>
   <action name="actionIncreaseFontSize">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/font-increase.svg</normaloff>:/MainWindow/Resources/font-increase.svg</iconset>
+   </property>
    <property name="text">
     <string>Increase font size</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
   </action>
   <action name="actionDecreaseFontSize">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/font-decrease.svg</normaloff>:/MainWindow/Resources/font-decrease.svg</iconset>
+   </property>
    <property name="text">
     <string>Decrease font size</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
   </action>
   <action name="actionFont">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/font.svg</normaloff>:/MainWindow/Resources/font.svg</iconset>
+   </property>
    <property name="text">
     <string>Font...</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+F</string>
+   </property>
   </action>
   <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/MainWindow/Resources/about.svg</normaloff>:/MainWindow/Resources/about.svg</iconset>
+   </property>
    <property name="text">
     <string>About</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
  </widget>
